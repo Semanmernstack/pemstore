@@ -1,0 +1,46 @@
+import Image from 'next/image'
+import React from 'react'
+import { useDispatch } from 'react-redux'
+import { addtoBasket } from "../slices/basketSlice"
+
+
+
+function Product( { id, title, price, description, category, image }) {
+  const dispatch = useDispatch()
+
+  const addgoodstoBasket = () => {
+    const product = {  
+    id,
+    title, 
+    price,
+    description,
+    category,
+    image,
+    };
+    dispatch(addtoBasket(product))
+
+
+  }
+  
+  return (
+    <div className="relative flex flex-col shadow-xl m-5 p-10 items-center my-2  ">
+      <p className="mb-4 font-serif animate-pulse">{category}</p>
+      <Image src={image}
+        width="150"
+        height="150"
+        objectfit="contain"
+      />
+      <h4 className="text-center font-extrabold text-gray-500 mt-3 ">{title}</h4>
+      <p className="truncate w-64">{description}</p>
+      <div className="font-bold">
+        <p>$ <span>{price}</span></p>
+      </div>
+     
+        <button onClick={addgoodstoBasket} className="text-center bg-slate-500 h-10 p-2 rounded-full mt-2" >Add to Cart</button>
+    </div>
+
+   
+    
+  )
+}
+export default Product
