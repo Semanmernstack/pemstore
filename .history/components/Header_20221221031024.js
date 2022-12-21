@@ -11,11 +11,11 @@ function Header() {
 
     return (
       <div className="flex  items-center justify-around   h-20 md:p-2  lg:p-5 bg-gray-500  sticky top-0 z-20">
-          <div onClick={() => router.push("/")} className="flex items-center  text-3xl md:text-5xl lg:text-6xl">
+          <div onClick={() => router.push("/")} className="flex  text-3xl md:text-5xl lg:text-6xl">
               <h1 className="cursor-pointer ">pemStore</h1>
               <div className=" flex      p-1 cursor-pointer rounded-full ">
-              <input className=" outline-none  rounded-full w-[200px] h-5 text-sm p-1 ml-2   " type="text" placeholder="Search for product..." />
-              <svg className="h-5 w-5"   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
+              <input className=" outline-none  rounded-full w-7 h-7   " type="text" placeholder="Search for product..." />
+              <svg className="h-7 w-7"   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
               </svg>
           </div>  
